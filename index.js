@@ -31,8 +31,8 @@ client.on("guildMemberRemove", (member) => {
 client.on('message', (message) => {
   if(message.author.bot) return;
 
-  if(message.content == '태훈') {
-    return message.reply('이익....대머리저리가!');
+  if(message.content == '석태훈') {
+    return message.reply('이익..대머리저리갓!');
   }
 
   if(message.content == 'embed') {
