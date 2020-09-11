@@ -3,8 +3,8 @@ const client = new Discord.Client();
 const token = process.argv.length == 2 ? process.env.token : "";
 const moment = require("moment");
 require("moment-duration-format");
-const welcomeChannelName = "안녕하세요";
-const byeChannelName = "안녕히가세요";
+const welcomeChannelName = "💬채팅";
+const byeChannelName = "💬채팅";
 const welcomeChannelComment = "어서오세요.";
 const byeChannelComment = "안녕히가세요.";
 
@@ -34,8 +34,8 @@ client.on("guildMemberRemove", (member) => {
 client.on('message', (message) => {
   if(message.author.bot) return;
 
-  if(message.content == 'ping') {
-    return message.reply('pong');
+  if(message.content == '도발') {
+    return message.reply('혼쭐을 낼 시간이야 릴리아! 어때, 괜찮았어?');
   }
 
   if(message.content == '!si') {
@@ -74,7 +74,7 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setTitle('타이틀')
       .setURL('http://www.naver.com')
-      .setAuthor('나긋해', img, 'http://www.naver.com')
+      .setAuthor('릴리아', img, 'https://namu.wiki/w/%EB%A6%B4%EB%A6%AC%EC%95%84(%EB%A6%AC%EA%B7%B8%20%EC%98%A4%EB%B8%8C%20%EB%A0%88%EC%A0%84%EB%93%9C)/%EB%8C%80%EC%82%AC')
       .setThumbnail(img)
       .addBlankField()
       .addField('Inline field title', 'Some value here')
